@@ -67,17 +67,17 @@ namespace CVParserAPI.Controllers
             return applicant;
         }
 
-        [HttpDelete("name/{name}")]
-        public async Task<IActionResult> DeleteApplicant(string name)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteApplicant(string id)
         {
-            var applicant = await _mongoDbService.GetAsync(name);
+            var applicant = await _mongoDbService.GetAsync(id);
 
             if (applicant == null)
             {
                 return NotFound();
             }
 
-            await _mongoDbService.RemoveAsync(name);
+            await _mongoDbService.RemoveAsync(id);
 
             return NoContent();
         }

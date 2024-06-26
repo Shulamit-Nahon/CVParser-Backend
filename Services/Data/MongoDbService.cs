@@ -27,8 +27,8 @@ namespace CVParserAPI.Services
         public async Task UpdateAsync(string id, ApplicantData updatedApplicant) =>
             await _applicantsCollection.ReplaceOneAsync(x => x.Id == id, updatedApplicant);
 
-        public async Task RemoveAsync(string name) =>
-            await _applicantsCollection.DeleteOneAsync(x => x.Name == name);
+        public async Task RemoveAsync(string id) =>
+            await _applicantsCollection.DeleteOneAsync(x => x.Id == id);
     }
 
     public class MongoDbSettings
