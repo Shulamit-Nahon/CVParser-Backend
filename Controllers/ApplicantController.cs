@@ -83,29 +83,4 @@ namespace CVParserAPI.Controllers
         }
     }
 
-
-    /*
-    [HttpGet("{id:length(24)}/download")]
-    public async Task<IActionResult> DownloadCV(string id)
-    {
-        var applicant = await _mongoDbService.GetAsync(id);
-
-        if (applicant == null)
-        {
-            return NotFound();
-        }
-
-        // Assuming the original PDF is stored in the database or file system
-        // You may need to adjust this based on how you're storing the original PDF
-        byte[] pdfBytes = await _mongoDbService.GetOriginalPdfAsync(id);
-
-        if (pdfBytes == null || pdfBytes.Length == 0)
-        {
-            return NotFound("Original PDF not found");
-        }
-
-        string fileName = applicant.OriginalFileName ?? $"{applicant.Name}_{applicant.FamilyName}_CV.pdf";
-        return File(pdfBytes, "application/pdf", fileName);
-    }*/
-
 }

@@ -18,8 +18,8 @@ namespace CVParserAPI.Services
         public async Task<List<ApplicantData>> GetAsync() =>
             await _applicantsCollection.Find(_ => true).ToListAsync();
 
-        public async Task<ApplicantData?> GetAsync(string name) =>
-            await _applicantsCollection.Find(x => x.Name == name).FirstOrDefaultAsync();
+        public async Task<ApplicantData?> GetAsync(string id) =>
+            await _applicantsCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
         public async Task CreateAsync(ApplicantData newApplicant) =>
             await _applicantsCollection.InsertOneAsync(newApplicant);
