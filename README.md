@@ -125,7 +125,3 @@ Ensure your `appsettings.json` file includes the necessary configuration setting
 I am Shulamit Nahon, a recent graduate in Computer Science from `JCT` (Jerusalem College of Technology). I am passionate about technology and software development, and I am currently seeking my first job in the field. With a strong foundation in programming and problem-solving skills, I am eager to apply my knowledge and contribute to innovative projects in a dynamic work environment.
 
 Please contact me if you have any questions about the project or me.
-
-## Screenshots
-
-<img height="400" src="/Screenshot/polygonMode.png">
