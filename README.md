@@ -34,6 +34,28 @@ This project is a RESTful API service that parses CV documents in PDF format, ex
 - Allows removal of applicant records from the database.
 
 
+## Database and Data Modeling Approach
+
+### Rationale for Choosing Schema-Less Approach
+
+Given the requirements of the project, a schema-less approach using MongoDB is more appropriate for the following reasons:
+
+#### Flexibility
+- **Evolving CV Formats**: Allows the system to adapt to varying CV formats without requiring significant changes to the database schema.
+- **Dynamic Fields**: New fields can be easily added as needed without schema alterations.
+
+#### Development Speed
+- **Rapid Prototyping**: Faster development and iteration since changes to the data model do not require schema migrations.
+
+#### Scalability
+- **Handling Large Volumes**: MongoDB scales horizontally, making it suitable for handling a growing number of CVs and associated data.
+
+#### Data Variety
+- **Unstructured Data**: Capable of storing unstructured or semi-structured data, common in CVs with various text formats and sections.
+
+In conclusion, while a schema-based approach offers strong data integrity and support for complex relationships, the flexibility and scalability of a schema-less approach make it a better fit for this project, where data formats are not uniform and can evolve over time.
+
+
 ## API Endpoints
 
 - **POST /api/applicants**: Upload and parse a new CV
