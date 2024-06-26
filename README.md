@@ -152,4 +152,26 @@ Please contact me if you have any questions about the project or me.
 
 **Main**
 
-<img height="400" src="/screenshots/img1">
+<img height="400" src="/screenshots/img1.png">
+
+**Upload File**
+
+<img height="400" src="/screenshots/img2.png">
+
+**Upload and parse a new CV**
+
+<img height="400" src="/screenshots/img3.png">
+
+**Retrieve all applicant records**
+
+<img height="400" src="/screenshots/img4.png">
+
+**Retrieve a specific applicant's information**
+
+<img height="400" src="/screenshots/img5.png">
+
+<img height="400" src="/screenshots/img6.png">
+
+**Remove an applicant's record**
+
+<img height="400" src="/screenshots/img7.png">
