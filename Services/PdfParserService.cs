@@ -40,8 +40,6 @@ namespace CVParserAPI.Services
 
         }
 
-        private readonly EnglishNameFinder _nameFinder;
-
         private string ExtractName(string text)
         {
             var firstLine = text.Split('\n').FirstOrDefault();
@@ -58,7 +56,7 @@ namespace CVParserAPI.Services
 
         private string ExtractFamilyName(string text)
         {
-          var firstLine = text.Split('\n').FirstOrDefault();
+            var firstLine = text.Split('\n').FirstOrDefault();
             if (!string.IsNullOrEmpty(firstLine))
             {
                 var words = firstLine.Split(' ');

@@ -47,10 +47,17 @@ namespace CVParserAPI.Controllers
             }
         }
 
-        [HttpGet("name/{name}")]
-        public async Task<ActionResult<ApplicantData>> GetApplicant(string name)
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<ApplicantData>>> GetAllApplicants()
         {
-            var applicant = await _mongoDbService.GetAsync(name);
+            var applicants = await _mongoDbService.GetAsync();
+            return Ok(applicants);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ApplicantData>> GetApplicant(string id)
+        {
+            var applicant = await _mongoDbService.GetAsync(id);
 
             if (applicant == null)
             {
